@@ -2,13 +2,13 @@
   "name": "csec_302_demo",
   "version": "1.0.0",
   "description": "CSEC 302 Demo on Prototype Pollution",
-  "main": "index.js",
+  "main": "protoPollution.js",
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/InHouse/protoPollution.js"
+    "start": "node ./src/protoPollution.js"
   },
-  "author": "",
+  "author": "Alexander Garofalo",
   "license": "ISC",
   "dependencies": {
     "babel": "^6.23.0",
