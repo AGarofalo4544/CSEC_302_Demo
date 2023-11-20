@@ -1,0 +1,31 @@
+{
+    "users": 
+    [
+        {
+            "name": "Alex",
+            "student": true,
+            "isAdmin": false,
+            "isPickled": false
+        },
+        {
+            "name": "ADMIN",
+            "student": null,
+            "isAdmin": true,
+            "isPickled": false
+        },
+        {
+            "name": "Cucumber",
+            "family": "Cucurbitaceae",
+            "genus": "Cucumis",
+            "species": "Cucumis sativus",
+            "isPickled": false
+        },
+        {
+            "name": "Pickle",
+            "family": "Cucurbitaceae",
+            "genus": "Cucumis",
+            "species": "Cucumis sativus",
+            "isPickled": true
+        }
+    ]
+}
