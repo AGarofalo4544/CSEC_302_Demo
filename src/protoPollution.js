@@ -1,5 +1,5 @@
 // Author: Alexander Garofalo
-// .load ./src/InHouse/protoPollution.js
+// .load ./src/protoPollution.js
 
 class User
 {
