@@ -18,14 +18,14 @@
             "family": "Cucurbitaceae",
             "genus": "Cucumis",
             "species": "Cucumis sativus",
-            "isPickled": true
+            "isPickled": false
         },
         {
             "name": "Pickle",
             "family": "Cucurbitaceae",
             "genus": "Cucumis",
             "species": "Cucumis sativus",
-            "isPickled": false
+            "isPickled": true
         }
     ]
 }

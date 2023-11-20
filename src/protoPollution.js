@@ -1,54 +1,4 @@
-// const fs = require('fs');
-// // const jsonfile = require('jsonfile');
-// const path = './src/users.json';
-// const path2 = './src/test.json';
-// // import data from './users.json';
-// // console.log(data);
-
-
-// function is_admin(user)
-// {
-//     // user = path;
-//     if (user.admin)
-//     {
-//         console.log(user.name + " you are admin. Welcome!");
-//     }
-//     else
-//     {
-//         console.log(user.name + " you are not admin. Goodbye!");
-//     }
-// }
-
-// let  express = require("express");
-// // import express from 'express';
-// var app = express();
-// app.get("/", function(request,response){
-//     fs.readFile(path, 'utf8', (err,data) => {
-//         if (err) {
-//             console.error("Error reading JSON file:", err);
-//             return;
-//         }
-//         const jsonData = JSON.parse(data);
-//         console.log(jsonData);
-//         // console.log("PICKLE");
-//         response.send(jsonData);
-//     })
-//     // jsonfile
-//     //     .readFile('./src/users.json')
-//     //     .then((data) => {
-//     //         response.send(JSON.parse(data));
-//     //     })
-//     //     .catch((err) => {
-//     //         console.log(err);
-//     //     });
-//     // jsonfile.readFile('./src/users.json', (err, data) => {
-//     //     if (err) {
-//     //         console.log(err);
-//     //         return;
-//     //     }
-//     //     response.send(data);
-//     // })
-// });
+// Author: Alexander Garofalo
 
 document.getElementById('fileInput').addEventListener('change', handleFileSelect);
 
@@ -56,26 +6,25 @@ function handleFileSelect(event)
 {
     const fileInput = event.target;
     const file = fileInput.files[0];
-
     if (!file)
     {
         return;
     }
 
     const reader = new FileReader();
-
-    reader.onload = function (e) {
+    reader.onload = function (e)
+    {
         try
         {
             const jsonData = JSON.parse(e.target.result);
             displayJsonKeysAndValues(jsonData);
+            console.log(file);
         }
         catch (parseError)
         {
             console.error('Error parsing JSON:', parseError);
         }
     };
-
     reader.readAsText(file);
 }
 
@@ -97,8 +46,3 @@ function displayJsonKeysAndValues(jsonData)
         }
     }
 }
-
-// app.listen(10000, function () {
-//     console.log("Started application on port %d", 10000);
-// });
-
