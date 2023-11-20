@@ -4,13 +4,13 @@
         {
             "name": "Alex",
             "student": true,
-            "admin": false,
+            "isAdmin": false,
             "isPickled": false
         },
         {
             "name": "ADMIN",
             "student": null,
-            "admin": true,
+            "isAdmin": true,
             "isPickled": false
         },
         {
