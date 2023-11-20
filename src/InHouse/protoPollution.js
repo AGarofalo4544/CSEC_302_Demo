@@ -1,19 +1,12 @@
 // Author: Alexander Garofalo
 // .load ./src/InHouse/protoPollution.js
 
-const set = require('set-value');
-
-set({}, '__proto__.isAdmin', true);
-if ({}.isAdmin === true)
-{
-    console.log('exploitable');
-}
-
 class User
 {
-    constructor(name, isAdmin, isPickled)
+    constructor(name, isStudent, isAdmin, isPickled)
     {
         this.name = name;
+        this.isStudent = isStudent;
         this.isAdmin = isAdmin;
         this.isPickled = isPickled;
     }
@@ -34,14 +27,14 @@ let myMap = new Map();
 myMap.set("User 0", 
 {
     "name": "Alex",
-    "student": true,
+    "isStudent": true,
     "isAdmin": false,
     "isPickled": false
 });
 myMap.set("User 1", 
 {
     "name": "ADMIN",
-    "student": null,
+    "isStudent": null,
     "isAdmin": true,
     "isPickled": false
 });
@@ -61,15 +54,25 @@ myMap.set("User 3",
     "species": "Cucumis sativus",
     "isPickled": true
 });
-console.log(myMap);
+// console.log(myMap);
 
-let user0 = new User("Alex", false, false);
-let user1 = new User("ADMIN", true, false);
+let user0 = new User("Alex", true, false, false);
+let user1 = new User("ADMIN", null, true, false);
 let users = [user0, user1];
 
 let cucumber = new Pickle("Cucumber", "Cucurbitaceae", "Cucumis", "Cucumis sativus", false);
 let pickle = new Pickle("Pickle", "Cucurbitaceae", "Cucumis", "Cucumis sativus", true);
 let myPickles = [cucumber, pickle];
 
-console.log(users);
-console.log(myPickles);
+// console.log(users);
+// console.log(myPickles);
+
+console.log(user0.__proto__.__proto__);
+
+// const set = require('set-value');
+
+// set({}, '__proto__.isAdmin', true);
+// if ({}.isAdmin === true)
+// {
+//     console.log(user0.__proto__.__proto__);
+// }

@@ -1,8 +1,11 @@
 html
 {
-    background-color: rgb(50, 50, 50);
+    /* background-color: rgb(50, 50, 50); */
+    background-color: white;
 
     font-family: 'Courier New', Courier, monospace;
-    color: white;
+    /* color: white; */
+    color: black;
     font-size: 14pt;
+    font-weight: bold;
 }
